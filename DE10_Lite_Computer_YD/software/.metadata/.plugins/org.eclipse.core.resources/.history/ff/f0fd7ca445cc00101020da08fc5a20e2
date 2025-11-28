@@ -15,7 +15,7 @@ int main()
 
         // Separa os dados conforme a lógica do VHDL
         // Bits 0 a 9: Distância calculada pelo hardware (0-1023 cm)
-        int dist_hardware = (data & 0x3FF)/2;
+        int dist_hardware = data & 0x3FF;
 
         // Bits 10 a 31: Contador Bruto (Ciclos de clock)
         int raw_cycles = data >> 10;

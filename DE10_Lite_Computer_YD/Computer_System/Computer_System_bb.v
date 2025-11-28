@@ -19,6 +19,9 @@ module Computer_System (
 	slider_switches_export,
 	system_pll_ref_clk_clk,
 	system_pll_ref_reset_reset,
+	telemetre_us_dist,
+	telemetre_us_echo,
+	telemetre_us_trig,
 	vga_CLK,
 	vga_HS,
 	vga_VS,
@@ -29,9 +32,7 @@ module Computer_System (
 	vga_B,
 	video_pll_ref_clk_clk,
 	video_pll_ref_reset_reset,
-	telemetre_us_dist,
-	telemetre_us_echo,
-	telemetre_us_trig);	
+	servo_pwm_writeresponsevalid_n);	
 
 	inout	[15:0]	arduino_gpio_export;
 	output		arduino_reset_n_export;
@@ -52,6 +53,9 @@ module Computer_System (
 	input	[9:0]	slider_switches_export;
 	input		system_pll_ref_clk_clk;
 	input		system_pll_ref_reset_reset;
+	output	[9:0]	telemetre_us_dist;
+	input		telemetre_us_echo;
+	output		telemetre_us_trig;
 	output		vga_CLK;
 	output		vga_HS;
 	output		vga_VS;
@@ -62,7 +66,5 @@ module Computer_System (
 	output	[3:0]	vga_B;
 	input		video_pll_ref_clk_clk;
 	input		video_pll_ref_reset_reset;
-	output	[9:0]	telemetre_us_dist;
-	input		telemetre_us_echo;
-	output		telemetre_us_trig;
+	output		servo_pwm_writeresponsevalid_n;
 endmodule
